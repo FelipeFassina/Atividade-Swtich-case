@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Exercicio5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double resultado = 0;
+
+        System.out.println("Insira dois numeros");
+        double num = sc.nextDouble();
+        double num2 = sc.nextDouble();
+
+        System.out.println("Escolha uma operação:");
+        System.out.println("M - Média entre os números");
+        System.out.println("S - Diferença do maior pelo menor");
+        System.out.println("P - Produto entre os números");
+        System.out.println("D - Divisão do primeiro pelo segundo");
+        char escolha = sc.next().charAt(0);
+
+        switch (escolha) {
+            case 'M':
+            case 'm':
+                resultado = (num + num2) / 2;
+                System.out.printf("A media entre os numeros digitados é de: %.2f", resultado);
+                break;
+            case 'S':
+            case 's':
+                resultado = num - num2;
+                System.out.printf("A diferença dos numeros é de: %.2f", resultado);
+                break;
+            case 'P':
+            case 'p':
+                resultado = num * num2;
+                System.out.printf("O produto dos dois numeros é de: %.2f", resultado);
+                break;
+            case 'D':
+            case 'd':
+                resultado = num / num2;
+                System.out.printf("O resultado da divisão dos dois numeros é: %.2f", resultado);
+                break;
+            default:
+                System.out.println("Operação incorreta, Use M, S, P, D");
+
+        }
+    }
+}
